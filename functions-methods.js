@@ -79,7 +79,7 @@ function checkEmailValidity(email) {
         resultOfCheck = "Email address is valid";
         console.log(resultOfCheck);
     } else {
-        resultOfCheck = "Email address is invalid. Email address doen't contain a '@' ";
+        resultOfCheck = "Email address is invalid. Email address doesn't contain a '@' ";
         console.log(resultOfCheck);
     }
 
