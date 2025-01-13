@@ -87,7 +87,8 @@ function averageGrade(gradesArray) {
         sumArrayValues = sumArrayValues  + gradesArray[i];
     }
     averageStudentGrade = sumArrayValues / gradesArray.length;
-    console.log("Average Grade this year: " + averageStudentGrade);
+    roundedAverageStudentGrade = averageStudentGrade.toFixed(2);
+    console.log("Average Grade this year: " + roundedAverageStudentGrade);
 }
 
 averageGrade([6, 4, 5]);
@@ -104,7 +105,7 @@ averageGrade([8, 9, 4, 6, 10]);
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
+// results incorporated in answer 2b
 
 
 /* Bonusopdracht: hoogste cijfer */
@@ -117,6 +118,13 @@ averageGrade([8, 9, 4, 6, 10]);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+let variableHighestGrade = 0;
+for (let i = 0; i < grades.length ; i++) {
+     if (grades[i] > variableHighestGrade) {
+         variableHighestGrade = grades[i];
+     }
+ }
+console.log("Highest grade this year is: " + variableHighestGrade);
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
@@ -124,6 +132,19 @@ averageGrade([8, 9, 4, 6, 10]);
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
+function highestGrade(arrayGrades) {
+let variableHighestGrade = 0;
+for (let i = 0; i < arrayGrades.length ; i++) {
+    if (arrayGrades[i] > variableHighestGrade) {
+        variableHighestGrade = arrayGrades[i];
+    }
+}
+console.log("Highest grade this year is: " + variableHighestGrade);
+}
+
+highestGrade([8, 9, 4, 6, 10]);
+highestGrade([6, 4, 5]);
+highestGrade(grades);
 // ---- Verwachte uitkomsten:
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
